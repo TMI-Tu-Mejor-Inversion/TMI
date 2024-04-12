@@ -1,0 +1,447 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Propiedades</title>
+        <!-- Enlaces a Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
+        <!-- Enlace a tu archivo CSS personalizado -->
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <!-- Estilos CSS -->
+       <style>
+        body {
+            background-color: rgba(0, 0, 255, 0.267); /* Color de fondo azul con opacidad */
+        }
+
+    /* Efecto de cambio de color al pasar el cursor sobre los hipervínculos */
+    .navbar-nav .nav-link:hover {
+        color: #ffffff !important; /* Cambia el color del texto al pasar el cursor */
+    }
+
+                /* Estilo para las imágenes del carrusel */
+                .carousel-item img {
+                height: 650px; /* Altura fija de 300px */
+                object-fit: cover; /* Escalar y recortar la imagen para llenar el contenedor */
+            }
+            
+                .carousel-caption {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: rgb(0, 0, 0);
+            z-index: 100;
+            padding: 10px; /* Añade espacio alrededor del texto */
+        }
+
+        .contenido-con-padding {
+    width: 75%;  
+    margin: 30px auto; 
+    padding: 20px; 
+    background-image: url('FINCASA.jpg'); 
+    background-size: cover; 
+    transition: transform 0.3s; 
+    color: black; 
+    margin-bottom: 30; 
+    align-items: center; 
+
+}
+
+        .contenido-con-padding:hover {
+            transform: scale(1.07); /* Agrandamiento al pasar el cursor */
+        }
+
+        .contenido-con-padding img {
+            opacity: 0.3; /* Opacidad de la imagen */
+        }
+
+/* Estilo para los servicios */
+.service-container {
+    margin-top: 50px; /* Agrega un margen superior de 50px */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-box {
+    width: calc(31% - 10px); /* Ajusta el ancho con un cálculo */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s; /* Transición de agrandamiento al pasar el cursor */
+    margin-bottom: 40px; /* Espacio inferior para separar los servicios */
+    background-size: cover; /* Tamaño de la imagen de fondo */
+    position: relative; /* Posicionamiento relativo para alinear verticalmente */
+    opacity: 0.9; /* Cambiar este valor según la opacidad deseada */
+}
+
+        .service-box img {
+            width: 25%; /* Ancho de la imagen */
+            margin: 0 auto 10px; /* Centra la imagen y añade espacio inferior */
+            display: block; /* Asegura que la imagen se centre correctamente */
+            opacity: 0.9; /* Cambia la opacidad de la imagen al pasar el cursor */
+        }
+        .service-box:hover {
+        transform: scale(1.1); 
+        }
+
+/* Ajusta la opacidad al pasar el cursor */
+.service-box:hover::before {
+    opacity: 0; /* Oculta el fondo al pasar el cursor */
+}
+
+/* Estilo para el texto dentro del servicio */
+.service-box h2 {
+    position: relative; /* Posición relativa para alinear el texto */
+    z-index: 1; /* Coloca el texto sobre la imagen */
+    color: black; /* Color del texto */
+}
+
+.opacity-background {
+            position: relative;
+            opacity: 0.5; /* Cambia la opacidad de la imagen al pasar el cursor */
+        }
+
+        .opacity-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.336); /* Color de fondo con opacidad */
+        }
+
+        /* Estilo para la imagen circular */
+        .imagen-circular {
+            border-radius: 100%; /* Bordes redondeados */
+            width: 80px; /* Ancho de la imagen */
+            height: 75px; /* Altura automática para mantener la proporción */
+            border: 4px solid #ffffff; /* Borde blanco */
+            transition: border-color 0.5s; /* Transición suave del color del borde */
+            margin-right: 5px; /* Espacio entre las imágenes */
+            max-width: 100px; /* Ancho máximo para evitar que las imágenes se vuelvan demasiado grandes */
+            justify-content: center; /* Centrar elementos horizontalmente */
+        }
+
+      /* Estilo para cambiar el color del borde al pasar el mouse sobre la imagen */
+      .imagen-circular:hover {
+            border-color: #000000; /* Cambia el color del borde al pasar el mouse */
+        }
+
+        /* Estilo para el contenedor de las imágenes */
+        .imagenes-container {
+            display: flex; /* Mostrar elementos en línea */
+            justify-content: center; /* Centrar elementos horizontalmente */
+        }
+
+        #map-container {
+            margin-top: 30px; 
+            padding-bottom: 60%; 
+            height: 0; 
+            overflow: hidden; 
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center; 
+            display: flex; 
+            justify-content: center;
+        }
+        #map-container iframe {
+            width: 60%;
+            height: 65%; 
+            position: absolute; 
+        }
+
+        /* Estilo para el texto */
+        .map-container h4 {
+            margin-top: 35px; /* Espacio superior */
+        }
+
+        /* Estilo para el footer */
+        .footer {
+            display: flex; /*Activar el modelo de caja flexible */
+            justify-content: center; /* Centrar horizontalmente el contenido del footer */
+            align-items: center; /* Centrar verticalmente el contenido del footer */
+            background-color: #000b3d; /* Color de fondo del footer */
+            padding: 20px 0; /* Añade un poco de espacio alrededor del contenido del footer */
+            position: fixed; /* Alinear el footer en la parte inferior */
+            bottom: 0; /* Alinear el footer en la parte inferior */
+            left: 0; /* Alinear el footer a la izquierda */
+            width: 100%; /* Ancho del footer al 100% */
+            z-index: 999; /* Asegurar que el footer esté por encima de otros elementos */
+            transition: transform 0.3s; /* Mantener la transición para la animación */
+            transform: translateY(100%); /* Ocultar inicialmente el footer */
+            max-height: 125px; /* Establece el límite de altura a 100px */
+            color: white; /* Cambia el color del texto a blanco */
+            text-align: right; /* Alinea el texto a la izquierda */
+        }
+
+        .footer.footer-hidden {
+            transform: translateY(0); /* Mostrar el footer cuando se active la clase 'footer-hidden; /* Mostrar el footer cuando se active la clase 'footer-hidden' */
+        }
+
+        .footer-hidden {
+            transform: translateY(100%);
+            /* Desplaza el footer hacia abajo */
+        }
+
+         /* Estilo para la segunda columna del footer */
+         .footer .row {
+            align-items: center; /* Alinear verticalmente los elementos de la fila */
+        }
+
+        /* Estilo para el contenedor de la caja de texto */
+    .caja-gris {
+        background-color: #505fe9; /* Color de fondo azul */
+        width: 100%; /* Ancho total de la ventana */
+        position: relative; /* Posicionamiento relativo */
+        overflow: hidden; /* Oculta el desbordamiento */
+        
+    }
+    /* Estilo para el contenedor del texto */
+    .contenedor-texto {
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluir el padding en el ancho total */
+    text-align: center; /* Alinea el texto a la izquierda */
+    font-size: 1.2em; /* Tamaño de fuente */
+    color: #000000; /* Color del texto */
+    max-width: 100%; /* Ancho máximo del contenedor del texto */
+    position: relative; /* Posicionamiento relativo */
+}
+
+/* Estilo para los ofrecimientos en negrita */
+.ofrecimiento {
+    font-weight: bold; /* Texto en negrita */
+    display: inline; /* Mostrar en línea */
+}
+
+/* Estilo para las viñetas */
+.viñeta {
+    margin-right: 5px; /* Margen derecho para separar las viñetas del texto */
+}
+
+        .caption-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px; /* Espacio inferior más pequeño */
+            height: 40px; /* Altura fija para los subtítulos */
+            overflow: hidden; /* Oculta el texto que desborda */
+        }
+
+        .caption-subtitle {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <header style="background-color: #000b3d;">
+      <div class="collapse bg-blue" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">Sobre nosotros</h4>
+              <p class="text-white">Somos una empresa interesada en generar confianza en nuestros clientes para sus inmuebles</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Inmobiliaria</h4>
+              <ul class="list-unstyled">
+                <li class="nav-item">
+                    <div class="mx-3"> <!-- Espaciado -->
+                        <a class="nav-link text-primary h5" href="Propiedades.html">Propiedades</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="mx-3"> <!-- Espaciado -->
+                        <a class="nav-link text-primary h5" href="Nosotros.html">Nosotros</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="mx-3"> <!-- Espaciado -->
+                        <a class="nav-link text-primary h5" href="Contactanos.html">Contactanos</a>
+                    </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark shadow-sm">
+        <div class="container">
+            <a>
+                <img src="Logo.jpg" width="300" height="100" class="d-inline-block align-top" alt="">
+            </a>        
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+        <!-- Carrusel de imágenes -->
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" 
+              aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item d-item">
+                <img src="imagen1.jpg" class="d-block w-100 d-img" alt="slider 1">
+                <div class="carousel-caption top-0 mt-4">
+                    <p class="mt-5 fs-3 text-uppercase">
+                    Ofrecemos un servicio personalizado y de calidad para atenderte en tus necesidades inmobiliarias
+                </p>
+                <h6 class="display-1 fw-bolder text-capitalize">No te pierdas la oportunidad de conocer hermosas propiedades!</h6>
+                </div>
+              </div>
+              <div class="carousel-item d-item">
+                <img src="imagen2.jpg" class="d-block w-100 d-img" alt="slider 2">
+                <div class="carousel-caption top-0 mt-4">
+                    <p class="mt-5 fs-3 text-uppercase">
+                    Contamos con un servicio profesional de administración de propiedades
+                </p>
+                <h6 class="display-1 fw-bolder text-capitalize"> De forma fácil y segura</h6>
+                </div>
+              </div>
+              <div class="carousel-item active d-item">
+                <img src="imagen3.jpg" class="d-block w-100 d-img" alt="slider 3">
+                <div class="carousel-caption top-0 mt-4">
+                    <p class="mt-5 fs-3 text-uppercase">
+                    Somos una inmobiliaria que busca ofrecer confianza a los clientes
+                </p>
+                <h6 class="display-1 fw-bolder text-capitalize">Mediante la atención brindada</h6>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    
+
+<div class="service-container">
+    <div class="service-box" style="background-image: url('fondo\ venta.jpg');">
+        <img src="ventas.png" alt="Ventas" class="service-image">
+        <h2 class="service-text">Ponemos a tu disposición toda nuestra experiencia 
+            para obtener una venta exitosa de tu inmueble.</h>
+    </div>
+    <div class="service-box" style="background-image: url('fondocompra.jpg');">
+        <img src="comprar.png" alt="Compras" class="service-image">
+        <h2 class="service-text">Ofrecemos la guía en la búsqueda y adquisición del 
+            hogar de tus sueños.</h2>
+    </div>
+    <div class="service-box" style="background-image: url('fondorenta.jpg');">
+        <img src="en-renta.png" alt="Rentas" class="service-image">
+        <h2 class="service-text">Te ofrecemos una amplia selección de opciones que se 
+            ajustan a tus necesidades y estilo de vida.</h2>
+    </div>
+</div>
+
+<div class="caja-gris">
+    <div class="contenedor-texto">    
+        <p>¡¡Descubre tu hogar ideal con nosotros!!</p>
+        <p>En FINCASA, estamos dedicados a hacer realidad tus sueños inmobiliarios. Nuestro equipo especializado te ofrece:</p>
+        <br>
+        <span class="viñeta">&#8226;</span> <span class="ofrecimiento">Variedad de propiedades:</span> Explora una amplia selección de casas, apartamentos y locales comerciales, adaptados a tus necesidades y preferencias.
+        <br>
+        <span class="viñeta">&#8226;</span> <span class="ofrecimiento">Asesoramiento personalizado:</span> Nuestros agentes te brindarán orientación experta para encontrar la propiedad perfecta que se ajuste a tus criterios y presupuesto.
+        <br>
+        <span class="viñeta">&#8226;</span> <span class="final">Soporte continuo:</span> Después de la transacción, seguimos a tu lado para resolver cualquier consulta y garantizar tu satisfacción a largo plazo.
+        <br><br>
+        Contáctanos para comenzar tu búsqueda inmobiliaria de manera segura!!!
+    </div>
+</div>
+
+<div class="jumbotron contenido-con-padding">
+    <h1 class="display-4">¡Encuentra tu hogar ideal con FINCASA!</h1>
+    <class="lead" style="font-size: 2.0rem;">Le ofrecemos un servicio integral para que la venta o alquiler de su inmueble sea un éxito.
+    <hr class="my-4">
+    <p style="font-size: 1.5rem;">Somos una empresa dedicada a la venta y renta de inmuebles de manera fácil y segura, comprometida con ofrecer una experiencia sin dificultades y de manera inmediata.</p>    
+</div>
+
+<h2 style="text-align: center;">¿Dónde nos encontramos?</h2>
+<div id="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d480954.3879962528!2d-99.59871702656251!3d19.650535100000013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f3bea5a04dcd%3A0x7175097de3f33cee!2sInmobiliaria%20FINCASA!5e0!3m2!1ses!2smx!4v1711558178434!5m2!1ses!2smx" width="750" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+    <!--Footer-->
+    <footer class="footer" id="footer" style="margin-top: 20px;">
+        <div class="container" style="margin-top: 20px;">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <!-- Texto -->
+                    <h6>Dirección: Av. Ozumbilla esq. Almería, Real del Cid; Tecámac Estado de México.</h6>
+                </div>
+                <div class="col-md-6">
+                    <h6>Contactanos en nuestras redes sociales!!!</h6>
+                    <!-- Contenedor de las imágenes -->
+                    <div class="imagenes-container d-flex justify-content-center justify-content-md-end">
+                        <!-- Imagen circular con enlace -->
+                        <a href="https://www.facebook.com/InmobiliariaFincasa.Mx" target="_blank">
+                            <img src="facebook.jpg" class="imagen-circular" alt="Visítanos en Facebook">
+                        </a>
+                        <a href="https://www.instagram.com/inmobiliariafincasa.mx?igsh=MWs1ZGZncGV2M2xsMQ==" target="_blank">
+                            <img src="instagram.jpg" class="imagen-circular" alt="Visítanos en Instagram">
+                        </a>
+                        <a href="https://www.tktok.com/@inmobiliariafincasa.mx?_t=8kz8KOvqu98&_r=1" target="_blank">
+                            <img src="tiktok.jpg" class="imagen-circular" alt="Visítanos en Tiktok">
+                        </a>
+                        <p class="col-md-6 subir">
+                            <a href="#">Back to top</a>
+                          </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+<script>
+    window.addEventListener('scroll', function() {
+        var footer = document.getElementById('footer');
+        var scrollHeight = document.body.scrollHeight;
+        var windowHeight = window.innerHeight;
+        var scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollPosition + windowHeight >= scrollHeight) {
+            footer.classList.add('footer-hidden'); // Oculta el footer cuando no se ha llegado al final de la página
+        } else {
+            footer.classList.remove('footer-hidden'); // Muestra el footer cuando se llega al final de la página
+        }
+    });
+</script>
+        <script>
+        let currentIndex = 0;
+        const items = document.querySelectorAll('.carousel-item');
+
+        function showItem(index) {
+            items.forEach((item, i) => {
+                if (i === index) {
+                    item.classList.add('active'); 
+                } else {
+                    item.classList.remove('active'); 
+                }
+            });
+        }
+
+        function nextItem() {
+            currentIndex = (currentIndex + 1) % items.length;
+            showItem(currentIndex);
+        }
+
+        setInterval(nextItem, 3000); // Cambia la imagen cada 3 segundos
+        showItem(currentIndex);
+    </script>
+        
+        
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Propiedades</title>
+        <!-- Enlaces a Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
+        <!-- Enlace a tu archivo CSS personalizado -->
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+
+
+            
+        <header style="background-color: #000b3d;">
+      <div class="collapse bg-blue" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">Sobre nosotros</h4>
+              <p class="text-muted">Somos una empresa interesada en generar confianza en nuestros clientes para sus inmuebles</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Menú</h4>
+              <ul class="list-unstyled">
+                <li class="nav-item">
+                    <div class="mx-3"> <!-- Espaciado -->
+                        <a class="nav-link text-primary h5" href="index.html">Inicio</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="mx-3"> <!-- Espaciado -->
+                        <a class="nav-link text-primary h5" href="Propiedades.html">Propiedades</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="mx-3"> <!-- Espaciado -->
+                        <a class="nav-link text-primary h5" href="Nosotros.html">Nosotros</a>
+                    </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark shadow-sm">
+        <div class="container">
+            <a>
+                <img src="Logo.jpg" width="300" height="100" class="d-inline-block align-top" alt="">
+            </a>        
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <body>
+        <h2>Contacto</h2>
+    <div class="mb-3">
+        <form action="#" method="post">
+            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su Nombre" required>
+    
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Ingrese su Correo electrónico" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su Número telefónico">
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Esccribanos un comentario!!" required></textarea>
+
+            <input type="submit" value="Enviar">
+      </div>
+    </body>
+
+   <!--Footer-->
+   <footer class="footer" id="footer" style="margin-top: 20px;">
+    <div class="container" style="margin-top: 20px;">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <!-- Texto -->
+                <h6>Dirección: Av. Ozumbilla esq. Almería, Real del Cid; Tecámac Estado de México.</h6>
+            </div>
+            <div class="col-md-6">
+                <h6>Contactanos en nuestras redes sociales!!!</h6>
+                <!-- Contenedor de las imágenes -->
+                <div class="imagenes-container d-flex justify-content-center justify-content-md-end">
+                    <!-- Imagen circular con enlace -->
+                    <a href="https://www.facebook.com/InmobiliariaFincasa.Mx" target="_blank">
+                        <img src="facebook.jpg" class="imagen-circular" alt="Visítanos en Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/inmobiliariafincasa.mx?igsh=MWs1ZGZncGV2M2xsMQ==" target="_blank">
+                        <img src="instagram.jpg" class="imagen-circular" alt="Visítanos en Instagram">
+                    </a>
+                    <a href="https://www.tktok.com/@inmobiliariafincasa.mx?_t=8kz8KOvqu98&_r=1" target="_blank">
+                        <img src="tiktok.jpg" class="imagen-circular" alt="Visítanos en Tiktok">
+                    </a>
+                    <p class="col-md-6 subir">
+                        <a href="#">Back to top</a>
+                      </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', function() {
+    var footer = document.getElementById('footer');
+    var scrollHeight = document.body.scrollHeight;
+    var windowHeight = window.innerHeight;
+    var scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollPosition + windowHeight >= scrollHeight) {
+        footer.classList.add('footer-hidden'); // Oculta el footer cuando no se ha llegado al final de la página
+    } else {
+        footer.classList.remove('footer-hidden'); // Muestra el footer cuando se llega al final de la página
+    }
+});
+</script>
+    <script>
+    // JavaScript para controlar el carrusel
+    let currentIndex = 0;
+    const items = document.querySelectorAll('.carousel-item');
+
+    function showItem(index) {
+        items.forEach((item, i) => {
+            if (i === index) {
+                item.classList.add('active'); // Añade la clase 'active' para mostrar el elemento
+            } else {
+                item.classList.remove('active'); // Remueve la clase 'active' para ocultar el elemento
+            }
+        });
+    }
+
+    function nextItem() {
+        currentIndex = (currentIndex + 1) % items.length;
+        showItem(currentIndex);
+    }
+
+    setInterval(nextItem, 3000); // Cambia la imagen cada 3 segundos
+    showItem(currentIndex);
+</script>
+    
+</head>
+
+<style>
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #010866;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #006eff;
+}   
+            /* Estilo para el footer */
+            .footer {
+            display: flex; /*Activar el modelo de caja flexible */
+            justify-content: center; /* Centrar horizontalmente el contenido del footer */
+            align-items: center; /* Centrar verticalmente el contenido del footer */
+            background-color: #000b3d; /* Color de fondo del footer */
+            padding: 20px 0; /* Añade un poco de espacio alrededor del contenido del footer */
+            position: fixed; /* Alinear el footer en la parte inferior */
+            bottom: 0; /* Alinear el footer en la parte inferior */
+            left: 0; /* Alinear el footer a la izquierda */
+            width: 100%; /* Ancho del footer al 100% */
+            z-index: 999; /* Asegurar que el footer esté por encima de otros elementos */
+            transition: transform 0.3s; /* Mantener la transición para la animación */
+            transform: translateY(100%); /* Ocultar inicialmente el footer */
+            max-height: 125px; /* Establece el límite de altura a 100px */
+            color: white; /* Cambia el color del texto a blanco */
+            text-align: right; /* Alinea el texto a la izquierda */
+        }
+
+
+        .footer.footer-hidden {
+            transform: translateY(0); /* Mostrar el footer cuando se active la clase 'footer-hidden; /* Mostrar el footer cuando se active la clase 'footer-hidden' */
+        }
+
+         /* Estilo para la segunda columna del footer */
+         .footer .row {
+            align-items: center; /* Alinear verticalmente los elementos de la fila */
+        }
+
+                /* Estilo para la imagen circular */
+                .imagen-circular {
+            border-radius: 100%; /* Bordes redondeados */
+            width: 80px; /* Ancho de la imagen */
+            height: 75px; /* Altura automática para mantener la proporción */
+            border: 4px solid #ffffff; /* Borde blanco */
+            transition: border-color 0.5s; /* Transición suave del color del borde */
+            margin-right: 5px; /* Espacio entre las imágenes */
+            max-width: 100px; /* Ancho máximo para evitar que las imágenes se vuelvan demasiado grandes */
+            justify-content: center; /* Centrar elementos horizontalmente */
+        }
+
+      /* Estilo para cambiar el color del borde al pasar el mouse sobre la imagen */
+      .imagen-circular:hover {
+            border-color: #000000; /* Cambia el color del borde al pasar el mouse */
+        }
+
+        .footer-hidden {
+            transform: translateY(100%);
+            /* Desplaza el footer hacia abajo */
+        }
+
+        /* Estilo para el contenedor de las imágenes */
+        .imagenes-container {
+            display: flex; /* Mostrar elementos en línea */
+            justify-content: center; /* Centrar elementos horizontalmente */
+        }
+       /* Estilo para la imagen circular */
+       .imagen-circular {
+            border-radius: 100%; /* Bordes redondeados */
+            width: 80px; /* Ancho de la imagen */
+            height: 75px; /* Altura automática para mantener la proporción */
+            border: 4px solid #ffffff; /* Borde blanco */
+            transition: border-color 0.5s; /* Transición suave del color del borde */
+            margin-right: 5px; /* Espacio entre las imágenes */
+            max-width: 100px; /* Ancho máximo para evitar que las imágenes se vuelvan demasiado grandes */
+            justify-content: center; /* Centrar elementos horizontalmente */
+        }
+
+      /* Estilo para cambiar el color del borde al pasar el mouse sobre la imagen */
+      .imagen-circular:hover {
+            border-color: #000000; /* Cambia el color del borde al pasar el mouse */
+        }
+
+        /* Estilo para el contenedor de las imágenes */
+        .imagenes-container {
+            display: flex; /* Mostrar elementos en línea */
+            justify-content: center; /* Centrar elementos horizontalmente */
+        }
+        
+</style>
+
+
+</body>
+</html>
